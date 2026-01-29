@@ -13,11 +13,11 @@ sites:
 status-website:
   baseUrl: /status-page-dev
   name: ""
-  logoUrl: https://raw.githubusercontent.com/empresamais-com-br/status-page-dev/master/assets/logo-dark.png
+  logoUrl: https://raw.githubusercontent.com/empresamais-com-br/status-page-dev/master/assets/logo-white.png
   theme: dark
   introTitle: "**Status do Sistema**"
   introMessage: Acompanhe a disponibilidade dos nossos serviços em tempo real.
-  # customCss: assets/custom.css
+  customCss: assets/custom.css
   navbar:
     - title: Status
       href: /
