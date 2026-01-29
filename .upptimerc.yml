@@ -9,9 +9,25 @@ sites:
 
 status-website:
   baseUrl: /status-page-dev
-  name: Status Dev
+  name: EmpresaAlvara Status
+  logoUrl: https://raw.githubusercontent.com/empresamais-com-br/status-page-dev/master/assets/logo.png  
+  theme: light
+  
+  # Textos customizados
+  introTitle: "**Status do Sistema**"
+  introMessage: Acompanhe a disponibilidade dos nossos serviços em tempo real.
+  
+  # Navbar
   navbar:
     - title: Status
       href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+    - title: Site
+      href: https://empresaalvara.com.br
+
+# Cores customizadas (CSS)
+customCSS: |
+  :root {
+    --color-primary: #2563eb;
+    --color-success: #22c55e;
+    --color-danger: #ef4444;
+  }
