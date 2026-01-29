@@ -15,7 +15,7 @@ status-website:
   name: "Engenharia de Confiabilidade do Sistema"
   logoUrl: https://raw.githubusercontent.com/empresamais-com-br/status-page-dev/master/assets/logo-light.png
   favicon: https://raw.githubusercontent.com/empresamais-com-br/status-page-dev/master/assets/perfil-gmail-500.png
-  customHeadHtml: "<title>EmpresaMais</title>"
+  js: "document.title = 'EmpresaMais';"
   theme: light
   introTitle: "**Status**"
   introMessage: Acompanhe a disponibilidade dos nossos serviços em tempo real.
