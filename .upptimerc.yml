@@ -77,15 +77,43 @@ status-website:
     }
 
 i18n:
+  # Rodapé
   footer: "© EmpresaMais™"
+  
+  # Status geral
   activeIncidents: "Incidentes Ativos"
   allSystemsOperational: "Todos os sistemas operacionais"
-  incidentReport: "Relatório do incidente"
-  weightedAverage: "Média ponderada"
-  averageResponseTime: "Tempo médio de resposta"
-  liveStatus: "Status em Tempo Real"
+  
+  # Página de detalhes do site
   overallUptime: "Disponibilidade geral"
-  overallUptimeXdays: "Disponibilidade geral (últimos $DAYS dias)"
+  overallUptimeTitle: "Disponibilidade geral"
+  averageResponseTime: "Tempo médio de resposta: $TIMEms"
+  averageResponseTimeTitle: "Tempo médio de resposta"
+  sevelDayResponseTime: "Tempo de resposta de 7 dias"
+  responseTimeMs: "Tempo de resposta (ms)"
+  
+  # Incidentes
+  incidentReport: "Relatório do incidente"
+  incidentTitle: "$SITE está $STATUS"
+  incidentDetails: "Aberto em $DATE às $TIME com $POSTS atualizações"
+  ongoing: "Em andamento"
+  resolved: "Resolvido"
+  identified: "Identificado"
+  investigating: "Investigando"
+  monitoring: "Monitorando"
+  
+  # Links e navegação
+  backToAllIncidents: "← Voltar para todos os incidentes"
+  viewAndSubscribe: "Ver e Inscrever-se no GitHub"
+  navGitHub: "GitHub"
+  
+  # Status em tempo real
+  liveStatus: "Status em Tempo Real"
+  
+  # Uptime
+  weightedAverage: "Média ponderada"
+  
+  # Tempo
   day: "dia"
   days: "dias"
   hour: "hora"
@@ -95,26 +123,37 @@ i18n:
   second: "segundo"
   seconds: "segundos"
   ms: "ms"
+  
+  # Estados
   loading: "Carregando..."
   up: "Operacional"
   down: "Fora do ar"
   degraded: "Degradado"
   unknown: "Desconhecido"
+  
+  # Data e hora
   dateAndTime: "$DATE às $TIME"
-  incidentTitle: "$SITE está $STATUS"
-  incidentDetails: "Aberto em $DATE às $TIME com $POSTS atualizações"
+  
+  # Incidentes anteriores
   pastIncidents: "Incidentes Anteriores"
   pastIncidentsResolved: "Resolvido em $MINUTES minutos"
+  
+  # Manutenção
   scheduledMaintenance: "Manutenção Programada"
   scheduledMaintenanceDetails: "Programado para $DATE às $TIME"
   startedAt: "Iniciado em"
+  
+  # Métricas
   responseTime: "Tempo de resposta"
-  responseTimeMs: "$TIME ms"
   uptime: "Disponibilidade"
   uptimePercent: "$UPTIME%"
+  
+  # Tabela
   status: "Status"
   history: "Histórico"
   url: "URL"
+  
+  # Períodos
   time24h: "24h"
   time7d: "7d"
   time30d: "30d"
