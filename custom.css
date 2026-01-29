@@ -1,20 +1,22 @@
-/* assets/custom.css - Tema personalizado para Status Page */
+/* assets/custom.css - Tema Light personalizado para Status Page */
 
 :root {
-  --background-dark: #0a0a1a;
-  --background-mid: #1a1a2e;
+  --background-light: #f8f9fa;
+  --background-white: #ffffff;
   --accent-cyan: #00d4ff;
-  --accent-green: #00ffcc;
-  --accent-yellow: #ffd93d;
-  --text-primary: #fff;
-  --text-muted: rgba(255, 255, 255, 0.6);
-  --border-subtle: rgba(255, 255, 255, 0.08);
+  --accent-green: #00d4a4;
+  --accent-yellow: #f0ad4e;
+  --accent-red: #dc3545;
+  --text-primary: #1a1a2e;
+  --text-muted: rgba(26, 26, 46, 0.6);
+  --border-subtle: rgba(0, 0, 0, 0.08);
 }
 
 /* Background */
 body {
-  background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 50%, #0f0f23 100%) !important;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f0f2f5 100%) !important;
   font-family: 'Segoe UI', -apple-system, sans-serif !important;
+  color: var(--text-primary) !important;
 }
 
 /* Grid pattern overlay */
@@ -26,8 +28,8 @@ body::before {
   right: 0;
   bottom: 0;
   background-image: 
-    linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(0, 212, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, 0.05) 1px, transparent 1px);
   background-size: 40px 40px;
   pointer-events: none;
   z-index: 0;
@@ -35,20 +37,33 @@ body::before {
 
 /* Cards/Boxes */
 .card, .box, [class*="status"] {
-  background: rgba(255, 255, 255, 0.03) !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  background: var(--background-white) !important;
+  border: 1px solid var(--border-subtle) !important;
   border-radius: 12px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
 }
 
 /* Links e botões */
-a, .button, button {
+a {
   color: var(--accent-cyan) !important;
   transition: all 0.3s ease !important;
 }
 
-a:hover, .button:hover, button:hover {
+a:hover {
   color: var(--accent-green) !important;
-  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+.button, button {
+  background: linear-gradient(135deg, #00d4ff 0%, #00d4a4 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+}
+
+.button:hover, button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3) !important;
 }
 
 /* Status indicators */
@@ -57,7 +72,7 @@ a:hover, .button:hover, button:hover {
 }
 
 .status-down, .error, [class*="red"] {
-  color: #ff6b6b !important;
+  color: var(--accent-red) !important;
 }
 
 .status-degraded, .warning, [class*="yellow"] {
@@ -69,13 +84,6 @@ h1, h2, h3 {
   color: var(--text-primary) !important;
 }
 
-h1 strong, h2 strong {
-  background: linear-gradient(90deg, #00d4ff, #00ffcc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
 /* Texto */
 p, span, div {
   color: var(--text-primary);
@@ -83,14 +91,14 @@ p, span, div {
 
 /* Navbar */
 nav, .navbar, header {
-  background: rgba(10, 10, 26, 0.9) !important;
-  border-bottom: 1px solid rgba(0, 212, 255, 0.2) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-bottom: 1px solid var(--border-subtle) !important;
   backdrop-filter: blur(10px);
 }
 
 /* Footer */
 footer {
   background: transparent !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-top: 1px solid var(--border-subtle) !important;
   color: var(--text-muted) !important;
 }
