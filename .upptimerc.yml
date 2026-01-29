@@ -3,6 +3,8 @@ repo: status-page-dev
 
 workflowSchedule:
   uptime: "* * * * *"
+  responseTime: "*/30 * * * *"
+  graphs: "*/30 * * * *"
 
 sites:
   - name: Site
