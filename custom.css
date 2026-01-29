@@ -14,22 +14,60 @@ body {
   background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 50%, #0f0f23 100%) !important;
 }
 
-nav, header {
+/* Grid texture background */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Remove linha do topo do navbar */
+nav, nav.svelte-a08hsz {
   background: rgba(10, 10, 26, 0.9) !important;
   border: none !important;
+  border-top: none !important;
+  box-shadow: none !important;
   backdrop-filter: blur(10px);
 }
 
-footer {
-  border: none !important;
+nav::before, nav::after,
+nav.svelte-a08hsz::before,
+nav.svelte-a08hsz::after {
+  display: none !important;
+  content: none !important;
 }
 
-.card, .site-card, [class*="card"] {
+/* Remove linha embaixo da aba ativa */
+nav a[aria-current="page"]::after,
+nav a.svelte-a08hsz::after,
+nav ul li a::after {
+  display: none !important;
+  background: none !important;
+}
+
+/* Footer sem borda */
+footer, footer.svelte-jbr799 {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Cards */
+.card, .site-card, [class*="card"], article {
   background: rgba(26, 26, 46, 0.8) !important;
   border: 1px solid rgba(0, 212, 255, 0.15) !important;
   border-radius: 12px !important;
 }
 
+/* Status indicators */
 .status-up, .up, [class*="success"] {
   color: #00ffcc !important;
 }
@@ -38,6 +76,7 @@ footer {
   color: #ff6b6b !important;
 }
 
+/* Links */
 a {
   color: #00d4ff !important;
 }
@@ -46,6 +85,7 @@ a:hover {
   color: #00ffcc !important;
 }
 
+/* Buttons */
 button, .btn {
   background: linear-gradient(135deg, #00d4ff 0%, #00ffcc 100%) !important;
   color: #0a0a1a !important;
@@ -53,6 +93,21 @@ button, .btn {
   border-radius: 8px !important;
 }
 
+/* Charts */
 .chart-line {
   stroke: #00d4ff !important;
+}
+
+/* Gráfico área */
+.chart-area, svg path[fill] {
+  fill: rgba(0, 212, 255, 0.2) !important;
+}
+
+/* Textos */
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff !important;
+}
+
+p, span, div {
+  color: rgba(255, 255, 255, 0.85);
 }
