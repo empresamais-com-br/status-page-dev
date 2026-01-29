@@ -9,7 +9,8 @@ sites:
 
 status-website:
   baseUrl: /status-page-dev
-  name: EmpresaAlvara Status
+  # name: EmpresaAlvara Status
+  name: ""
   logoUrl: https://raw.githubusercontent.com/empresamais-com-br/status-page-dev/master/assets/logo.png  
   theme: light
   
