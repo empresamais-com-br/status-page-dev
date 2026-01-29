@@ -14,7 +14,7 @@ status-website:
   theme: dark
   introTitle: "**Status do Sistema**"
   introMessage: Acompanhe a disponibilidade dos nossos serviços em tempo real.
-  customCss: assets/custom.css
+  # customCss: assets/custom.css
   navbar:
     - title: Status
       href: /
