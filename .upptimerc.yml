@@ -5,7 +5,7 @@ workflowSchedule:
   uptime: "* * * * *"
 
 sites:
-  - name: Website
+  - name: Site
     url: https://empresaalvara.com.br
     expectedStatusCodes:
       - 200
