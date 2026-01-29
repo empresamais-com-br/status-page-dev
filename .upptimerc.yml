@@ -1,6 +1,9 @@
 owner: empresamais-com-br
 repo: status-page-dev
 
+workflowSchedule:
+  uptime: "* * * * *"
+
 sites:
   - name: Website Dev
     url: https://empresaalvara.com.br
