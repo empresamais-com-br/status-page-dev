@@ -18,11 +18,11 @@ status-website:
   introTitle: "**Status**"
   introMessage: Acompanhe a disponibilidade dos nossos serviços em tempo real.
   customCss: assets/custom.css
-  navbar:
-    - title: Status
-      href: /
-    - title: Site
-      href: https://empresaalvara.com.br
+  # navbar:
+    # - title: Status
+      # href: /
+    # - title: Site
+      # href: https://empresaalvara.com.br
 
 i18n:
-  footer: "© 2025 Empresa Alvará - Todos os direitos reservados"
+  footer: "© 2025 EmpresaMais™"
