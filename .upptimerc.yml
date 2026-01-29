@@ -13,16 +13,53 @@ sites:
 status-website:
   baseUrl: /status-page-dev
   name: "Engenharia de Confiabilidade do Sistema"
-  logoUrl: https://raw.githubusercontent.com/empresamais-com-br/status-page-dev/master/assets/logo-light.png
-  theme: light
+  logoUrl: https://raw.githubusercontent.com/empresamais-com-br/status-page-dev/master/assets/logo-dark.png
+  theme: dark
   introTitle: "**Status**"
   introMessage: Acompanhe a disponibilidade dos nossos serviços em tempo real.
-  customCss: assets/custom.css
-  # navbar:
-    # - title: Status
-      # href: /
-    # - title: Site
-      # href: https://empresaalvara.com.br
+  css: |
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+    
+    body, * {
+      font-family: 'Manrope', sans-serif !important;
+    }
+    
+    body {
+      background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 50%, #0f0f23 100%) !important;
+    }
+    
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+    
+    a {
+      color: #00d4ff !important;
+    }
+    
+    a:hover {
+      color: #00ffcc !important;
+    }
+    
+    nav {
+      background: rgba(10, 10, 26, 0.95) !important;
+      border-bottom: 1px solid rgba(0, 212, 255, 0.2) !important;
+      backdrop-filter: blur(10px);
+    }
+    
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
 
 i18n:
-  footer: "© EmpresaMais™" 
+  footer: "© EmpresaMais™2"
