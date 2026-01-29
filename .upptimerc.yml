@@ -10,7 +10,7 @@ sites:
 status-website:
   baseUrl: /status-page-dev
   name: ""
-  logoUrl: https://raw.githubusercontent.com/empresamais-com-br/status-page-dev/master/assets/logo.png
+  logoUrl: https://raw.githubusercontent.com/empresamais-com-br/status-page-dev/master/assets/logo-dark.png
   theme: dark
   
   introTitle: "**Status do Sistema**"
