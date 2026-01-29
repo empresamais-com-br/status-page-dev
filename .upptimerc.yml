@@ -23,4 +23,6 @@ status-website:
       href: /
     - title: Site
       href: https://empresaalvara.com.br
-  footer: "© 2025 Empresa Alvará - Todos os direitos reservados - bugado"
+
+i18n:
+  footer: "© 2025 Empresa Alvará - Todos os direitos reservados"
