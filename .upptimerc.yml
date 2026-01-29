@@ -35,19 +35,12 @@ status-website:
   css: |
     @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
     
-    /* Correção do footer - preenche toda a tela */
-    html {
-      min-height: 100%;
+    body, * {
+      font-family: 'Manrope', sans-serif !important;
     }
     
     body {
-      min-height: 100vh;
       background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f0f2f5 100%) !important;
-      background-attachment: fixed !important;
-    }
-    
-    body, * {
-      font-family: 'Manrope', sans-serif !important;
     }
     
     body::before {
