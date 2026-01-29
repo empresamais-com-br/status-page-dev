@@ -12,10 +12,10 @@ sites:
 
 status-website:
   baseUrl: /status-page-dev
-  name: ""
+  name: "Engenharia de Confiabilidade do Sistema"
   logoUrl: https://raw.githubusercontent.com/empresamais-com-br/status-page-dev/master/assets/logo-light.png
   theme: light
-  introTitle: "**Engenharia de Confiabilidade do Sistema**"
+  introTitle: "**Status**"
   introMessage: Acompanhe a disponibilidade dos nossos serviços em tempo real.
   customCss: assets/custom.css
   navbar:
