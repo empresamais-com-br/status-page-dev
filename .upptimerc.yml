@@ -9,26 +9,93 @@ sites:
 
 status-website:
   baseUrl: /status-page-dev
-  # name: EmpresaAlvara Status
   name: ""
-  logoUrl: https://raw.githubusercontent.com/empresamais-com-br/status-page-dev/master/assets/logo.png  
-  theme: light
+  logoUrl: https://raw.githubusercontent.com/empresamais-com-br/status-page-dev/master/assets/logo.png
+  theme: dark
   
-  # Textos customizados
   introTitle: "**Status do Sistema**"
   introMessage: Acompanhe a disponibilidade dos nossos serviços em tempo real.
   
-  # Navbar
   navbar:
     - title: Status
       href: /
     - title: Site
       href: https://empresaalvara.com.br
 
-# Cores customizadas (CSS)
-customCSS: |
-  :root {
-    --color-primary: #2563eb;
-    --color-success: #22c55e;
-    --color-danger: #ef4444;
-  }
+  css: |
+    :root {
+      --color-bg: #0a0a1a;
+      --color-bg-secondary: #1a1a2e;
+      --color-text: #ffffff;
+      --color-text-secondary: rgba(255, 255, 255, 0.7);
+      --color-primary: #00d4ff;
+      --color-success: #00ffcc;
+      --color-warning: #ffd93d;
+      --color-danger: #ff6b6b;
+      --color-border: rgba(0, 212, 255, 0.2);
+    }
+    
+    body {
+      background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 50%, #0f0f23 100%) !important;
+    }
+    
+    /* Grid texture background */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: -1;
+    }
+    
+    /* Header/Navbar */
+    nav, header {
+      background: rgba(10, 10, 26, 0.9) !important;
+      border-bottom: 1px solid rgba(0, 212, 255, 0.2) !important;
+      backdrop-filter: blur(10px);
+    }
+    
+    /* Cards */
+    .card, .site-card, [class*="card"] {
+      background: rgba(26, 26, 46, 0.8) !important;
+      border: 1px solid rgba(0, 212, 255, 0.15) !important;
+      border-radius: 12px !important;
+    }
+    
+    /* Status indicators */
+    .status-up, .up, [class*="success"] {
+      color: #00ffcc !important;
+    }
+    
+    .status-down, .down, [class*="danger"], [class*="error"] {
+      color: #ff6b6b !important;
+    }
+    
+    /* Links */
+    a {
+      color: #00d4ff !important;
+    }
+    
+    a:hover {
+      color: #00ffcc !important;
+    }
+    
+    /* Buttons */
+    button, .btn {
+      background: linear-gradient(135deg, #00d4ff 0%, #00ffcc 100%) !important;
+      color: #0a0a1a !important;
+      border: none !important;
+      border-radius: 8px !important;
+    }
+    
+    /* Charts */
+    .chart-line {
+      stroke: #00d4ff !important;
+    }
