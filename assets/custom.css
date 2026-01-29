@@ -30,39 +30,38 @@ body::before {
   z-index: -1;
 }
 
-/* Remove TODAS as linhas/bordas do navbar */
-nav, header, nav *, header * {
+/* Remove linha do topo do navbar */
+nav, nav.svelte-a08hsz {
   background: rgba(10, 10, 26, 0.9) !important;
   border: none !important;
   border-top: none !important;
-  border-bottom: none !important;
   box-shadow: none !important;
   backdrop-filter: blur(10px);
 }
 
 nav::before, nav::after,
-header::before, header::after {
+nav.svelte-a08hsz::before,
+nav.svelte-a08hsz::after {
   display: none !important;
   content: none !important;
 }
 
-/* Remove linha decorativa do topo da página */
-body > *:first-child {
-  border-top: none !important;
+/* Remove linha embaixo da aba ativa */
+nav a[aria-current="page"]::after,
+nav a.svelte-a08hsz::after,
+nav ul li a::after {
+  display: none !important;
+  background: none !important;
 }
 
 /* Footer sem borda */
-footer, footer * {
+footer, footer.svelte-jbr799 {
   border: none !important;
   box-shadow: none !important;
 }
 
-footer::before, footer::after {
-  display: none !important;
-}
-
 /* Cards */
-.card, .site-card, [class*="card"] {
+.card, .site-card, [class*="card"], article {
   background: rgba(26, 26, 46, 0.8) !important;
   border: 1px solid rgba(0, 212, 255, 0.15) !important;
   border-radius: 12px !important;
