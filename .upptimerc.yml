@@ -77,43 +77,92 @@ status-website:
     }
 
 i18n:
-  # Rodapé
-  footer: "© EmpresaMais™"
-  
-  # Status geral
+  # ========================================
+  # PÁGINA PRINCIPAL
+  # ========================================
   activeIncidents: "Incidentes Ativos"
   allSystemsOperational: "Todos os sistemas operacionais"
   
-  # Página de detalhes do site
-  overallUptime: "Disponibilidade geral"
+  # ========================================
+  # STATUS EM TEMPO REAL
+  # ========================================
+  liveStatus: "Status em Tempo Real"
+  overallUptime: "Disponibilidade geral: $UPTIME"
   overallUptimeTitle: "Disponibilidade geral"
+  
+  # ========================================
+  # PÁGINA DE DETALHES DO SITE
+  # ========================================
+  sevelDayResponseTime: "Tempo de resposta de 7 dias"
   averageResponseTime: "Tempo médio de resposta: $TIMEms"
   averageResponseTimeTitle: "Tempo médio de resposta"
-  sevelDayResponseTime: "Tempo de resposta de 7 dias"
   responseTimeMs: "Tempo de resposta (ms)"
+  weightedAverage: "Média ponderada"
   
-  # Incidentes
-  incidentReport: "Relatório do incidente"
-  incidentTitle: "$SITE está $STATUS"
-  incidentDetails: "Aberto em $DATE às $TIME com $POSTS atualizações"
+  # ========================================
+  # INCIDENTES - LISTAGEM
+  # ========================================
+  incidentReport: "Relatório do incidente #$NUMBER →"
+  activeIncidentSummary: "Aberto em $DATE com $POSTS atualizações"
+  pastIncidents: "Incidentes Anteriores"
+  pastIncidentsResolved: "Resolvido em $MINUTES minutos com $POSTS atualizações"
+  
+  # ========================================
+  # INCIDENTES - DETALHES
+  # ========================================
+  incidentTitle: "Detalhes do incidente $NUMBER"
+  incidentDetails: "Detalhes do incidente"
+  incidentFixed: "Resolvido"
+  incidentOngoing: "Em andamento"
+  incidentOpenedAt: "Aberto em"
+  incidentClosedAt: "Fechado em"
+  incidentSubscribe: "Inscrever-se para atualizações"
+  incidentViewOnGitHub: "Ver no GitHub"
+  incidentCommentSummary: "Publicado em $DATE por $AUTHOR"
+  incidentBack: "← Voltar aos incidentes"
+  
+  # ========================================
+  # STATUS DOS INCIDENTES
+  # ========================================
   ongoing: "Em andamento"
   resolved: "Resolvido"
   identified: "Identificado"
   investigating: "Investigando"
   monitoring: "Monitorando"
   
-  # Links e navegação
+  # ========================================
+  # NAVEGAÇÃO
+  # ========================================
   backToAllIncidents: "← Voltar para todos os incidentes"
   viewAndSubscribe: "Ver e Inscrever-se no GitHub"
   navGitHub: "GitHub"
   
-  # Status em tempo real
-  liveStatus: "Status em Tempo Real"
+  # ========================================
+  # MANUTENÇÃO PROGRAMADA
+  # ========================================
+  scheduledMaintenance: "Manutenção Programada"
+  scheduledMaintenanceDetails: "Programado para $DATE às $TIME"
+  startedAt: "Iniciado em"
   
-  # Uptime
-  weightedAverage: "Média ponderada"
+  # ========================================
+  # ESTADOS
+  # ========================================
+  up: "Operacional"
+  down: "Fora do ar"
+  degraded: "Degradado"
+  unknown: "Desconhecido"
+  loading: "Carregando..."
   
-  # Tempo
+  # ========================================
+  # MÉTRICAS
+  # ========================================
+  responseTime: "Tempo de resposta"
+  uptime: "Disponibilidade"
+  uptimePercent: "$UPTIME%"
+  
+  # ========================================
+  # TEMPO
+  # ========================================
   day: "dia"
   days: "dias"
   hour: "hora"
@@ -124,38 +173,46 @@ i18n:
   seconds: "segundos"
   ms: "ms"
   
-  # Estados
-  loading: "Carregando..."
-  up: "Operacional"
-  down: "Fora do ar"
-  degraded: "Degradado"
-  unknown: "Desconhecido"
-  
-  # Data e hora
+  # ========================================
+  # DATA E HORA
+  # ========================================
   dateAndTime: "$DATE às $TIME"
   
-  # Incidentes anteriores
-  pastIncidents: "Incidentes Anteriores"
-  pastIncidentsResolved: "Resolvido em $MINUTES minutos"
-  
-  # Manutenção
-  scheduledMaintenance: "Manutenção Programada"
-  scheduledMaintenanceDetails: "Programado para $DATE às $TIME"
-  startedAt: "Iniciado em"
-  
-  # Métricas
-  responseTime: "Tempo de resposta"
-  uptime: "Disponibilidade"
-  uptimePercent: "$UPTIME%"
-  
-  # Tabela
-  status: "Status"
-  history: "Histórico"
-  url: "URL"
-  
-  # Períodos
+  # ========================================
+  # PERÍODOS DE TEMPO
+  # ========================================
   time24h: "24h"
   time7d: "7d"
   time30d: "30d"
   time1y: "1a"
   timeAll: "tudo"
+  
+  # ========================================
+  # TABELA
+  # ========================================
+  status: "Status"
+  history: "Histórico"
+  url: "URL"
+  
+  # ========================================
+  # RODAPÉ
+  # ========================================
+  footer: "© EmpresaMais™"
+  
+  # ========================================
+  # ERRO DE RATE LIMIT (API do GitHub)
+  # ========================================
+  rateLimitExceededTitle: "Limite de requisições excedido"
+  rateLimitExceededIntro: "Você excedeu o número de requisições que pode fazer em uma hora, então precisará esperar antes de acessar este site novamente. Alternativamente, você pode adicionar um Token de Acesso Pessoal do GitHub para continuar usando este site."
+  rateLimitExceededWhatDoesErrorMean: "O que significa este erro?"
+  rateLimitExceededErrorMeaning: "Este site usa a API do GitHub para acessar dados em tempo real sobre o status dos nossos serviços. Por padrão, o GitHub permite 60 requisições por hora por endereço IP, que você consumiu."
+  rateLimitExceededErrorHowCanFix: "Como posso resolver?"
+  rateLimitExceededErrorFix: "Você pode esperar mais uma hora e o limite do seu endereço IP será restaurado. Alternativamente, você pode adicionar seu Token de Acesso Pessoal do GitHub, que te dá 5.000 requisições adicionais por hora."
+  rateLimitExceededGeneratePAT: "Aprenda como gerar um Token de Acesso Pessoal"
+  rateLimitExceededHasSet: "Você tem um token de acesso pessoal configurado."
+  
+  # ========================================
+  # ERROS GERAIS
+  # ========================================
+  errorIntro: "Ops! Ocorreu um erro ao tentar carregar os status de disponibilidade."
+  errorText: "Por favor, tente novamente em alguns instantes."
