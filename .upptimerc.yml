@@ -15,7 +15,7 @@ status-website:
   name: ""
   logoUrl: https://raw.githubusercontent.com/empresamais-com-br/status-page-dev/master/assets/logo-light.png
   theme: light
-  introTitle: "**Status do Sistema**"
+  introTitle: "**Engenharia de Confiabilidade do Sistema**"
   introMessage: Acompanhe a disponibilidade dos nossos serviços em tempo real.
   customCss: assets/custom.css
   navbar:
@@ -23,3 +23,4 @@ status-website:
       href: /
     - title: Site
       href: https://empresaalvara.com.br
+  footer: "© 2025 Empresa Alvará - Todos os direitos reservados"
