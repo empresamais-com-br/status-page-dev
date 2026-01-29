@@ -1,20 +1,23 @@
+/* assets/custom.css - Tema personalizado para Status Page */
+
 :root {
-  --color-bg: #0a0a1a;
-  --color-bg-secondary: #1a1a2e;
-  --color-text: #ffffff;
-  --color-text-secondary: rgba(255, 255, 255, 0.7);
-  --color-primary: #00d4ff;
-  --color-success: #00ffcc;
-  --color-warning: #ffd93d;
-  --color-danger: #ff6b6b;
-  --color-border: rgba(0, 212, 255, 0.2);
+  --background-dark: #0a0a1a;
+  --background-mid: #1a1a2e;
+  --accent-cyan: #00d4ff;
+  --accent-green: #00ffcc;
+  --accent-yellow: #ffd93d;
+  --text-primary: #fff;
+  --text-muted: rgba(255, 255, 255, 0.6);
+  --border-subtle: rgba(255, 255, 255, 0.08);
 }
 
+/* Background */
 body {
   background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 50%, #0f0f23 100%) !important;
+  font-family: 'Segoe UI', -apple-system, sans-serif !important;
 }
 
-/* Grid texture background */
+/* Grid pattern overlay */
 body::before {
   content: '';
   position: fixed;
@@ -27,87 +30,67 @@ body::before {
     linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
   background-size: 40px 40px;
   pointer-events: none;
-  z-index: -1;
+  z-index: 0;
 }
 
-/* Remove linha do topo do navbar */
-nav, nav.svelte-a08hsz {
-  background: rgba(10, 10, 26, 0.9) !important;
-  border: none !important;
-  border-top: none !important;
-  box-shadow: none !important;
-  backdrop-filter: blur(10px);
-}
-
-nav::before, nav::after,
-nav.svelte-a08hsz::before,
-nav.svelte-a08hsz::after {
-  display: none !important;
-  content: none !important;
-}
-
-/* Remove linha embaixo da aba ativa */
-nav a[aria-current="page"]::after,
-nav a.svelte-a08hsz::after,
-nav ul li a::after {
-  display: none !important;
-  background: none !important;
-}
-
-/* Footer sem borda */
-footer, footer.svelte-jbr799 {
-  border: none !important;
-  box-shadow: none !important;
-}
-
-/* Cards */
-.card, .site-card, [class*="card"], article {
-  background: rgba(26, 26, 46, 0.8) !important;
-  border: 1px solid rgba(0, 212, 255, 0.15) !important;
+/* Cards/Boxes */
+.card, .box, [class*="status"] {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
   border-radius: 12px !important;
 }
 
-/* Status indicators */
-.status-up, .up, [class*="success"] {
-  color: #00ffcc !important;
+/* Links e botões */
+a, .button, button {
+  color: var(--accent-cyan) !important;
+  transition: all 0.3s ease !important;
 }
 
-.status-down, .down, [class*="danger"], [class*="error"] {
+a:hover, .button:hover, button:hover {
+  color: var(--accent-green) !important;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+/* Status indicators */
+.status-up, .success, [class*="green"] {
+  color: var(--accent-green) !important;
+}
+
+.status-down, .error, [class*="red"] {
   color: #ff6b6b !important;
 }
 
-/* Links */
-a {
-  color: #00d4ff !important;
+.status-degraded, .warning, [class*="yellow"] {
+  color: var(--accent-yellow) !important;
 }
 
-a:hover {
-  color: #00ffcc !important;
+/* Títulos */
+h1, h2, h3 {
+  color: var(--text-primary) !important;
 }
 
-/* Buttons */
-button, .btn {
-  background: linear-gradient(135deg, #00d4ff 0%, #00ffcc 100%) !important;
-  color: #0a0a1a !important;
-  border: none !important;
-  border-radius: 8px !important;
+h1 strong, h2 strong {
+  background: linear-gradient(90deg, #00d4ff, #00ffcc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-/* Charts */
-.chart-line {
-  stroke: #00d4ff !important;
-}
-
-/* Gráfico área */
-.chart-area, svg path[fill] {
-  fill: rgba(0, 212, 255, 0.2) !important;
-}
-
-/* Textos */
-h1, h2, h3, h4, h5, h6 {
-  color: #ffffff !important;
-}
-
+/* Texto */
 p, span, div {
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--text-primary);
+}
+
+/* Navbar */
+nav, .navbar, header {
+  background: rgba(10, 10, 26, 0.9) !important;
+  border-bottom: 1px solid rgba(0, 212, 255, 0.2) !important;
+  backdrop-filter: blur(10px);
+}
+
+/* Footer */
+footer {
+  background: transparent !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: var(--text-muted) !important;
 }
