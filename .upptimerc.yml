@@ -18,6 +18,20 @@ status-website:
   theme: light
   introTitle: "**Status**"
   introMessage: Acompanhe a disponibilidade dos nossos serviços em tempo real.
+  js: |
+    // Força formato de data pt-BR
+    const originalToLocaleDateString = Date.prototype.toLocaleDateString;
+    Date.prototype.toLocaleDateString = function(locale, options) {
+      return originalToLocaleDateString.call(this, 'pt-BR', options);
+    };
+    const originalToLocaleString = Date.prototype.toLocaleString;
+    Date.prototype.toLocaleString = function(locale, options) {
+      return originalToLocaleString.call(this, 'pt-BR', options);
+    };
+    const originalToLocaleTimeString = Date.prototype.toLocaleTimeString;
+    Date.prototype.toLocaleTimeString = function(locale, options) {
+      return originalToLocaleTimeString.call(this, 'pt-BR', options);
+    };
   css: |
     @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
     
